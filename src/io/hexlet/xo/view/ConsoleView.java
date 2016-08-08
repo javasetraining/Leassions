@@ -1,0 +1,16 @@
+package io.hexlet.xo.view;
+
+import io.hexlet.xo.model.Game;
+
+/**
+ * Created by MaRV on 8/7/2016.
+ */
+public class ConsoleView {
+
+    public void show(final Game game) {}
+
+    public boolean move(final Game game) {
+        return false;
+    }
+
+}
