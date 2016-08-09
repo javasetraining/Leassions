@@ -12,13 +12,27 @@ public class Game {
     private static final String GAME_NAME = "XO";
     private Player[] players;
 
-    public Player currentPlayer(){
+    public Player currentPlayer() {
         return null;
 
     }
-public boolean move(final int x, final int y) {
-    return false;
-}
+
+    public boolean move(final int x, final int y) {
+        if (x < 0) {
+            return false;
+        }
+        if (y < 0) {
+            return false;
+        }
+        if (x >= 3) {
+            return false;
+        }
+        if (x >= 4) {
+            return false;
+        }
+        return true;
+    }
+
     public Player player1;
 
     public Player player2;
