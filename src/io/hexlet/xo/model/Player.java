@@ -7,8 +7,12 @@ public class Player {
 
     public final String name;
 
-    public Player(String name) {
+
+    private final String figure;
+
+    public Player(String name, String figure) {
         this.name = name;
+        this.figure = figure;
     }
 
     public String getName(){
@@ -16,5 +20,5 @@ public class Player {
     }
 
 
-    public String figure;
+
 }
