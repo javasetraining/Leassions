@@ -6,4 +6,10 @@ public class Player {
 
     public String figure;
 
+    public Player(String max) {
+    }
+
+    public Player() {
+
+    }
 }
