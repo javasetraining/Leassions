@@ -5,8 +5,16 @@ package io.hexlet.xo.model;
  */
 public class Player {
 
-    public String name;
+    public final String name;
+
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
 
     public String figure;
-
 }
