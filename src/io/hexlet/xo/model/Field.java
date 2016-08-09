@@ -20,7 +20,6 @@ public class Field {
 
     public String f22;
 
-
     public int getSize() {
         return 3;
     }
