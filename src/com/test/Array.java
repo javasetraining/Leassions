@@ -21,7 +21,7 @@ public class Array {
 //        int x[][] = new int[][]{{}}; ok
 //        int x[][] = new int[][]{{2}, {3, 4}}; ok
 
-       
+
         int[][] m = {{1, 2, 4}, {1, 6}, {2, 8, 9}};
         System.out.println(m[1][1]);
     }
