@@ -1,35 +1,40 @@
 package io.hexlet.xo.controllers;
 
-import io.hexlet.xo.model.Field;
 import io.hexlet.xo.model.Point;
+import io.hexlet.xo.model.Field;
+import io.hexlet.xo.model.exceptions.InvalidPointException;
 
 public class CurrentMoveController {
 
     public String currentMove(final Field field) {
-        // BEGIN (write your solution here)
-        int x = 0;
-        int y = 0;
-        for(
-                int i = 0;
-                i<field.getSize();i++)
-            for(
-                    int i2 = 0;
-                    i2<field.getSize();i2++)
+        int countFigure = 0;
+        for (int x = 0; x < field.getSize(); x++) {
+            countFigure += countFiguresInTheRow(field, x);
+        }
 
-            {
-                final Point p = new Point();
-                p.x = i;
-                p.y = i2;
-                final String figure = field.getFigure(p);
-                if (figure == null) continue;
-                // вместо "equals" можно использовтаь стандартный оператор "==",
-                // но рекомендуется поискать то, зачем использовать именно "equals" для сравнения строк.
-                if (figure.equals("X")) x++;
-                if (figure.equals("O")) y++;
-            }
+        if (countFigure == field.getSize() * field.getSize())
+            return null;
 
-        return x==y?"X":"O";
+        if (countFigure % 2 == 0)
+            return "X";
+
+        return "O";
     }
-    // END
-}
 
+    private int countFiguresInTheRow(final Field field, final Integer row) {
+        int countFigure = 0;
+        for (int x = 0; x < field.getSize(); x++) {
+            // Create here Point p
+            // with
+            // x = x
+            // y = row
+            // BEGIN (write your solution here)
+            final Point p = new Point(x, row);
+            // END
+            if (field.getFigure(p) != null)
+                countFigure++;
+        }
+        return countFigure;
+    }
+
+}

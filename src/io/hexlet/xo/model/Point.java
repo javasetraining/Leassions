@@ -1,12 +1,24 @@
 package io.hexlet.xo.model;
 
-/**
-* Created by MaRV on 8/7/2016.
-        */
 public class Point {
 
-    public int x;
+    private final int x;
 
-    public int y;
+    private final int y;
+
+    // BEGIN (write your solution here)
+    public Point(final int x, final int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+    // END
 
 }
