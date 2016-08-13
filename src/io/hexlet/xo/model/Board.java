@@ -14,8 +14,8 @@ public class Board {
     public void initArray(){
 //        figures[0] = new Figure(SIZE_FIELD);
 
-        figures[0][0] = new Figure("O");
-        figures[0][0] = new Figure("x");
+//        figures[0][0] = new Figure("O");
+//        figures[0][0] = new Figure("x");
 
     }
 
