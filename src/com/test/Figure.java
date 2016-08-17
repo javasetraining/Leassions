@@ -1,20 +1,18 @@
 package com.test;
 
-/**
- * Created by MaRV on 8/13/2016.
- */
-    public class Figure {
+public class Figure {
 
-        String a = "3";
-        public String getA() {
+    private String a;
 
-            return a;
-        }
+    private String getA() {
 
-        public void setA(String a) {
-
-            this.a = a;
-
-        }
+        return a;
     }
+
+    public void setA(String a) {
+
+        this.a = a;
+
+    }
+}
 
