@@ -10,13 +10,21 @@ public class Game {
 
     private final String name;
 
+    // creat the constructor
     // BEGIN (write your solution here)
-    public Game(final Player p1, final Player p2, final Field field, final String name) {
-        this.player1 = p1;
-        this.player2 = p2;
-        this.field = field;
-        this.name = name;
+
+    Game(final GameBuilder gameBuilder) {
+        this.player1 = gameBuilder.getPlayer1();
+        this.player2 = gameBuilder.getPlayer2();
+        this.field = gameBuilder.getField();
+        this.name = gameBuilder.getName();
+//        this.player1 = player1;
+//        this.player2 = player2;
+//        this.field = field;
+//        this.name = name;
     }
+
+    // END
 
     public Player getPlayer1() {
         return this.player1;
@@ -33,6 +41,5 @@ public class Game {
     public String getName() {
         return name;
     }
-    // END
 
 }

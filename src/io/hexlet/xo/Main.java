@@ -3,7 +3,9 @@ package io.hexlet.xo;
 import io.hexlet.xo.model.Field;
 import io.hexlet.xo.model.Point;
 import io.hexlet.xo.model.Player;
+import io.hexlet.xo.model.PlayerBuilder;
 import io.hexlet.xo.model.Game;
+import io.hexlet.xo.model.GameBuilder;
 import io.hexlet.xo.model.exceptions.*;
 import io.hexlet.xo.view.*;
 import io.hexlet.xo.controllers.*;
@@ -53,11 +55,11 @@ public class Main {
         testPrivateMethod("checkColumn", WinnerController.class, Field.class, Integer.class);
         testPrivateMethod("checkRow", WinnerController.class, Field.class, Integer.class);
 
-        final Player p = new Player("Slava", "X");
+        final Player p = new PlayerBuilder().name("Slava").figure("X").build();
         if (!p.getName().equals("Slava")) throw new RuntimeException(String.format("Player.getName returns %s instead of %s", p.getName(), "Slava"));
         if (!p.getFigure().equals("X")) throw new RuntimeException(String.format("Player.getFigure returns %s instead of %s", p.getFigure(), "X"));
-        final Player p2 = new Player("Gleg", "O");
-        final Game g = new Game(p, p2, field, "XO");
+        final Player p2 = new PlayerBuilder().name("Gleg").figure("O").build();
+        final Game g = new GameBuilder().player1(p).player2(p2).field(field).name("XO").build();
         if (!g.getPlayer1().equals(p)) throw new RuntimeException(String.format("Game.getPlayer1 returns %s instead of %s", g.getPlayer1(), p));
         if (!g.getPlayer2().equals(p2)) throw new RuntimeException(String.format("Game.getPlayer2 returns %s instead of %s", g.getPlayer2(), p2));
     }

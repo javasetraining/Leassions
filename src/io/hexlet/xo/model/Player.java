@@ -6,11 +6,15 @@ public class Player {
 
     private final String figure;
 
+    // creat the constructor
     // BEGIN (write your solution here)
-    public Player(final String name, final String figure) {
-        this.name = name;
-        this.figure = figure;
+
+    Player(final PlayerBuilder playerBuilder){
+        this.name = playerBuilder.getName();
+        this.figure = playerBuilder.getFigure();
     }
+
+    // END
 
     public String getName() {
         return name;
@@ -19,5 +23,5 @@ public class Player {
     public String getFigure() {
         return figure;
     }
-    // END
+
 }
