@@ -30,6 +30,9 @@
 
 # IntelliJ
 /out/
+### Intellij+iml Patch ###
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+*.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
