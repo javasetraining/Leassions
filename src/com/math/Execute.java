@@ -8,11 +8,17 @@ package com.math;
 public class Execute {
     public static void main(String[] args) {
 
-        Sum sum = new Sum();
+//        Sum sum = new Sum();
         Sum.sum(3, 20);
         int x = (int) System.currentTimeMillis() * -1;
 
         Ternary.calculateTernary(x);
+
+
+        String word = "hello";
+        Ternary.sayYes(word);
+
+
 
 
 
