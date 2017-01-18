@@ -8,6 +8,9 @@ package com.math;
 public class Execute {
     public static void main(String[] args) {
 
+        System.out.println(new Factorialmoi().fact(10));
+    }}
+/*
 //        Sum sum = new Sum();
         Sum.sum(3, 20);
         int x = (int) System.currentTimeMillis() * -1;
@@ -17,10 +20,19 @@ public class Execute {
 
         String word = "hello";
         Ternary.sayYes(word);
+        System.out.println(Factorialmoi.fact(30));
+        int i = 3;
+        int resultat = Factorialmoi.fact2(i);
 
-
-
-
-
+        System.out.println("the last result is " + resultat);
+        System.out.println("reversed " + rev("abc"));
     }
-}
+
+    static String rev(String n){
+//        String   n ;
+
+        String reversed = new StringBuilder(n).reverse().toString();
+//        System.out.println(reversed);
+        return reversed;
+//        return n;
+    }}*/
