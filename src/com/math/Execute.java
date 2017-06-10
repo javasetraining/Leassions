@@ -5,11 +5,22 @@ package com.math;
  * <p>
  * java_methods_basics_part_2/quiz_unit
  */
+
 public class Execute {
     public static void main(String[] args) {
+        System.out.println();
+    }
 
-        System.out.println(new Factorialmoi().fact(10));
-    }}
+    class Factorialmoi {
+        int fact(int n) {
+            int result;
+            if (n == 0) return 1;
+
+            result = fact(n - 1) * n;
+            return result;
+        }
+    }
+}
 /*
 //        Sum sum = new Sum();
         Sum.sum(3, 20);
