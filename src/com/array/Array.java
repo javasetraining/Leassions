@@ -15,6 +15,7 @@ public class Array {
         System.out.println("myArrayInitialized is " + myArrayInitialized[2]);
         System.out.println("============================");
 
+
         int newArray[] = {1, 66, 3, 5, 234, 3, 8};
         for (int count = 0; count < newArray.length; count++) {
             System.out.println(count + "\t" + newArray[count]);
