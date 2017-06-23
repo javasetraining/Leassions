@@ -5,7 +5,7 @@ public class Box {
     int width;
     int height;
     int depth;
-    static final int CONST_FINAL_42 = 12;
+    static final int CONST_FINAL_42 = 42;
 
 
     public Box(int width, int height, int depth) {
