@@ -9,5 +9,9 @@ public class One extends Two {
         two.sheIsOnDiet_FromThreeClass();
         two.doSomthingFromClassTWo();
         System.out.println("sout " + two.getS());
+
+        showString();
+        System.out.println(showString());
+
     }
 }
